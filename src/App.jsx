@@ -185,7 +185,7 @@ const GuestView = ({ setView }) => {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
-    const weddingDate = new Date("2027-06-26T15:00:00").getTime();
+    const weddingDate = new Date("2027-08-07T15:00:00").getTime();
     const timer = setInterval(() => {
       const now = new Date().getTime();
       const distance = weddingDate - now;
@@ -214,7 +214,7 @@ const GuestView = ({ setView }) => {
         <div className="relative z-10 text-center text-white p-6">
           <p className="font-serif tracking-widest text-sm mb-4 uppercase letter-spacing-2">Welcome to our wedding</p>
           <h1 className="font-script text-7xl mb-4 drop-shadow-md">Ben & Alice</h1>
-          <p className="font-serif text-xl tracking-widest">26.06.2027</p>
+          <p className="font-serif text-xl tracking-widest">07.08.2027</p>
         </div>
       </div>
 
@@ -297,7 +297,7 @@ const AdminView = ({ guests, tables, setView }) => {
   const musicRequests = attendingGuests.filter(g => g.musicRequest && g.musicRequest.trim() !== '');
   const guestMessages = guests.filter(g => g.message && g.message.trim() !== '');
 
-  const weddingDate = new Date("2027-06-26T15:00:00");
+  const weddingDate = new Date("2027-08-07T15:00:00");
   const isWeddingPassed = new Date() > weddingDate;
   const isGuestbookVisible = isWeddingPassed || guestbookUnlocked;
 
@@ -545,7 +545,7 @@ const AdminView = ({ guests, tables, setView }) => {
             {!isGuestbookVisible ? (
               <div className="text-center py-16 px-4 bg-gray-50 rounded-lg border-2 border-dashed border-gray-200">
                 <Lock size={48} className="mx-auto mb-4 text-gray-300" />
-                <h4 className="text-xl font-serif text-gray-700 mb-2">Sealed until June 26, 2027</h4>
+                <h4 className="text-xl font-serif text-gray-700 mb-2">Sealed until August 07, 2027</h4>
                 <p className="text-gray-500 font-serif max-w-md mx-auto">
                   Guests are leaving notes, but they are locked away until after the wedding day.
                 </p>
